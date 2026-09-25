@@ -1,0 +1,22 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: standings-api-service
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/batch_f1_db
+    driver-class-name: org.postgresql.Driver
+    username: app_user
+    password: password
+
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: standings-api-group
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring.json.trusted.packages: "*"

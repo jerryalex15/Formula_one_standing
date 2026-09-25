@@ -1,0 +1,49 @@
+# Maven
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+
+# Eclipse
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+# VS Code
+.vscode/
+
+# Fichiers OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Fichiers de config sensibles (adapte selon tes besoins)
+application-local.yml
+application-local.properties
+*.env
+.env
+
+# Sorties générées par le batch
+output/
+
+# Bases de données locales / dumps
+*.sql.bak
+
+# Build divers
+*.class
+*.jar
+!.mvn/wrapper/maven-wrapper.jar

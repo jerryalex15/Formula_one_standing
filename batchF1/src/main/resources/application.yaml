@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: batchF1
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/batch_f1_db
+    driver-class-name: org.postgresql.Driver
+    username: app_user
+    password: password
+
+  sql:
+    init:
+      mode: always
+
+  kafka:
+    bootstrap-servers: localhost:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+
+  batch:
+    job:
+      enabled: false   # on ne veut plus qu'il se lance tout seul au démarrage
+    jdbc:
+      initialize-schema: always
